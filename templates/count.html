@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Count</title>
+</head>
+<body>
+<h1>Count the words</h1>
+<ol>
+<li>The original text: "{{ originaltext}}"</li>
+<li># of words: {{ count }}</li>
+<li>Most common words:
+ <ol>
+{% for word, counttotal in wordlist %}
+ <li>{{ word }}: {{ counttotal}}</li>
+{% endfor %}
+ </ol></li>
+<li>All of the words: {{ wordlist}}
+</ol>
+<p><a href="{% url 'homepage' %}">Start again!</a></p>
+</body>
+</html>
